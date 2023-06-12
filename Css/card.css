@@ -6,25 +6,17 @@
     box-sizing: inherit;
 }
 
-html{
-min-height:150%;
-min-width:100%;
-}
-
 body{
     font-family: 'Ultra', serif;
     background:linear-gradient(blue, white , rgb(29, 29, 230));
+    /*background-color:linear-gradient(rgb(161,230,228), rgb(126, 146, 238);*/
     background-repeat:no-repeat;
     background-origin:content-box;
-    background:cover/center;
+    background-size:cover;
     margin:0;
     padding:0;
-}  
-@media (min-width:188rem) {
-   html{
-  padding:120px;
-   } 
 }
+
 img {
     width:160px;
     height:130px;
@@ -50,18 +42,26 @@ h1 {
     box-shadow: 2px 2px 3px navy;
 }
 
+.card-features {
+    margin:0 10px;
+    padding:12px 16px;
+    display:block;
+}
+
 .clock-icon {
 position:relative;
 right:8%;
-top:15px;
-size:15px;
+top:18px;
 text-align: center;
+font-size:1.5rem;
 }
 
 .times {
-position: relative;
-left:7%;
-bottom:15px;
+position:relative;
+left:8%;
+font-size:20px;
+font-weight: bold;
+bottom:20px;
 display: flex;
 justify-content: center;
 }
@@ -69,18 +69,21 @@ justify-content: center;
 .game__stars{
 position: relative;
 bottom:15px;
-right:7%;
+right:8%;
 display: flex;
 justify-content: center;
+font-size:2rem;
 }
 
 .replay-icon {
 position: relative;
-left:50rem;
-bottom:35px;
-border-radius:10px;
-width:20px;
-
+left:57%;
+bottom:50px;
+font-size:2rem;
+/* font-size: 2.5rem;
+position: absolute;
+left: 57%;
+top: 23%; */
 }
 
 .memory__card-game{
@@ -88,51 +91,153 @@ width:20px;
  justify-content:center;
  justify-items:space-evenly;
  padding:15px;
- margin:0 auto;
-}
 
-.replay-icon {
-   /* background-color: brown;*/
-
-    width:10px;
-   /* border:1px solid rosybrown;*/
-    padding:0;    
 }
 
 .game__features-icon {
- /*background-color: rgb(11, 118, 206);
- border: 2px solid blue;*/
- 
- border-radius: 20px;
+ /*background-color: rgb(11, 118, 206);*/
+ border:1px solid rgb(34, 157, 233);
+ border-radius:20px;
  display:grid;
  justify-items:space-around;
+ box-shadow:4px 5px 6px gray;
  grid-template-columns:160px 160px 160px 160px;
  justify-content: center;
- gap:15px; 
+ gap:15px;
+ padding:10px 12px;
+ vertical-align: middle; 
  margin:0 auto;
+ 
  }
 
- .game__features-icon {
-   /*background-color:rgb(74, 75, 250);*/
+ /*.game__features-icon {
+   background-color:rgb(74, 75, 250);
    vertical-align:middle;
    box-shadow:4px 5px 6px gray;
    padding:5px;
    margin-left:1rem;
- }
-
- @media (max-width:145rem){ 
- .game__features-icon {
-  /*background-color:rgb(123, 123, 241);*/
-  border:2px solid rgb(135, 138, 192);
-  margin:0 auto;
-  padding:15px 18px;
-
- }  
-}
+ }*/
  
  .game-feature { 
    list-style-type:none; 
    padding:0;
    margin:2px;
-   
+}
+
+@media screen and (max-width:733px) {
+    .memory__card-game{
+        display:inline-block;
+         justify-items:space-around;
+         grid-template-columns:160px 160px 160px 160px;
+         justify-content: center;        
+         padding:10px 5px;
+ 
+        }
+ 
+        .game__features-icon {
+         display:block;
+        /* grid-template-columns:160px 160px 160px 160px;*/
+         justify-content: center;
+         padding:15px 12px;
+         
+         }
+         .card-features {
+             margin:1rem 10px;
+             padding:12px 16px;
+             display:block;
+             text-align:center;
+         }
+         
+     
+         .clock-icon {
+             position:relative;
+             left:5px;
+             top:5%;
+             display:inline;
+             font-size:1.5rem;
+             }
+             
+             .times {
+             position: relative;
+             left:2%;
+             top:0.5rem;
+             text-align:center;
+             font-size:15px;
+             }
+             
+             .game__stars{
+             position: relative;
+             top:4px;
+             left:5px;
+             margin:0 12px;
+             font-size:2rem;
+             }
+             
+             .replay-icon {
+             position: relative;
+             left:5px;
+             top:15px;
+             font-size:1.5rem;
+             text-align:middle;
+        
+  }  
+}
+
+@media screen and (max-width:688px) {
+    .memory__card-game{
+        display:block;
+        justify-items:space-around;
+        grid-template-columns:160px 160px 160px 160px;
+        justify-content: center;      
+        padding:10px 5px;
+
+       }
+
+       .game__features-icon {
+        display: block;
+       /* grid-template-columns:160px 160px 160px 160px;*/
+        justify-content: center;
+        padding:15px 12px;
+        
+        }
+        .card-features {
+            margin:1rem 10px;
+            padding:12px 16px;
+            display:block;
+            text-align:center;
+        }
+        
+    
+        .clock-icon {
+            position:relative;
+            left:5px;
+            top:5%;
+            display:inline;
+            font-size:1.5rem;
+            }
+            
+            .times {
+            position: relative;
+            left:2%;
+            top:0.5rem;
+            text-align:center;
+            font-size:15px;
+            }
+            
+            .game__stars{
+            position: relative;
+            top:4px;
+            left:5px;
+            margin:0 12px;
+            font-size:2rem;
+            }
+            
+            .replay-icon {
+            position: relative;
+            left:5px;
+            top:15px;
+            font-size:1.5rem;
+            text-align:middle;
+       
+ }
 }
